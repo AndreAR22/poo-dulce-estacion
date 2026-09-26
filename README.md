@@ -2,16 +2,23 @@
 ## Análisis
 
 1. **Objetivo**\
-Crear un sistema que le permita al personal de Dulce Estación registar máquinas, consltar inventario, cotizar, confirmar alquileres, registrar devolucioones y ver reportes.
+Crear un sistema que le permita al personal de Dulce Estación registrar máquinas, consultar inventario, cotizar, confirmar alquileres, registrar devoluciones y ver reportes.
 
 2. **Entradas y salidas**\
-asdfasdfasdf
+Entradas: datos de la máquina, código de inventario, días de alquiler y confirmación o cancelación.\
+Salidas: menú, inventario, cotizaciones, disponibilidad, reportes y mensajes de confirmación o error.
 
 3. **Condiciones y restricciones**\
-asdfasdfasdf
+Los códigos no podrán estar vacíos ni repetidos. Los valores numéricos serán positivos; los días, potencias y porciones serán enteros.
+
+   El costo será la tarifa diaria por los días, más los recargos: Popcorn con carrito, Q40 diarios; Algodon de más de 1000 W, Q60 por alquiler; Chocolate, Q20 por kg de capacidad por día.
+
+   Solo se alquilarán máquinas disponibles y se devolverán las alquiladas. Solo confirmar un alquiler aumentará los ingresos.
+
+   Se iniciará con dos máquinas por categoría, disponibles y sin ingresos. Las entradas inválidas no cerrarán el programa. Los montos tendrán dos decimales y los datos se guardarán solo durante la ejecución.
 
 4. **Clases y responsabilidades**\
-Existiran 3 tipos de máquina disponibles, siendo la poporopera, la fuente de chocolate y la máquina de algodón de azucar; estas 3 clases se basaran en una clase padre "Máquina."
+Existirán tres tipos de máquina: Popcorn, Chocolate y Algodon, basadas en la clase padre Maquina. GestorAlquileres administrará el inventario y los alquileres. 
 
 5. **Atributos y métodos**\
-asdfasdfsd
+adfssdfnadsnfjkaksjdf
