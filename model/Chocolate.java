@@ -4,8 +4,8 @@ public class Chocolate extends Maquina {
 
     private double capacidad;
 
-    public Chocolate(int codigo, String marca, String modelo, double capacidad) {
-        super(codigo, marca, modelo, 0.0);
+    public Chocolate(int codigo, String marca, String modelo, double tarifa, double capacidad) {
+        super(codigo, marca, modelo, tarifa);
         this.capacidad = capacidad;
     }
 

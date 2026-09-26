@@ -40,7 +40,7 @@ public class Maquina {
     }
 
     public String obtenerDetalle() {
-        return null;
+        return this.marca;
     }
 
     public void alquilar() {

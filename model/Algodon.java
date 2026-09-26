@@ -4,8 +4,8 @@ public class Algodon extends Maquina {
 
     private int potencia;
 
-    public Algodon(int codigo, String marca, String modelo, int potencia) {
-        super(codigo, marca, modelo, 0.0);
+    public Algodon(int codigo, String marca, String modelo, double tarifa, int potencia) {
+        super(codigo, marca, modelo, tarifa);
         this.potencia = potencia;
     }
 
