@@ -36,16 +36,26 @@ public class Maquina {
     }
 
     public double calcularCosto(int dias) {
-        return 0;
+        return redondear(getTarifa() * dias);
     }
 
     public String obtenerDetalle() {
-        return this.marca;
+        return "Codigo: " + getCodigo()
+                + " | Marca: " + getMarca()
+                + " | Modelo: " + getModelo()
+                + " | Tarifa: Q" + String.format("%.2f", getTarifa())
+                + " | Disponible: " + (isDisponible() ? "Si" : "No");
     }
 
     public void alquilar() {
+        this.disponible = false;
     }
 
     public void devolver() {
+        this.disponible = true;
+    }
+
+    protected static double redondear(double valor) {
+        return Math.round(valor * 100.0) / 100.0;
     }
 }

@@ -2,6 +2,8 @@ package model;
 
 public class Popcorn extends Maquina {
 
+    private static final double RECARGO_CARRITO_DIARIO = 40.0;
+
     private int porcionesHora;
     private boolean conCarrito;
 
@@ -21,10 +23,19 @@ public class Popcorn extends Maquina {
 
     @Override
     public double calcularCosto(int dias) {
-        return 0;
+        double costo = super.calcularCosto(dias);
+        if (getConCarrito()) {
+            costo += RECARGO_CARRITO_DIARIO * dias;
+        }
+        return redondear(costo);
     }
 
     public String getSpecs() {
-        return null;
+        return "Porciones/hora: " + getPorcionesHora() + " | Con carrito: " + (getConCarrito() ? "Si" : "No");
+    }
+
+    @Override
+    public String obtenerDetalle() {
+        return super.obtenerDetalle() + " | " + getSpecs();
     }
 }

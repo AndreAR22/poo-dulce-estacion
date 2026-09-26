@@ -20,5 +20,3 @@ Los códigos no podrán estar vacíos ni repetidos. Los valores numéricos será
 4. **Clases y responsabilidades**\
 Existirán tres tipos de máquina: Popcorn, Chocolate y Algodon, basadas en la clase padre Maquina. La clase Alquileres administrará el inventario y los alquileres. 
 
-5. **Atributos y métodos**\
-adfssdfnadsnfjkaksjdf

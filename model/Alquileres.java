@@ -12,7 +12,7 @@ public class Alquileres {
     }
 
     public double getIngresos() {
-        return 0;
+        return ingresos;
     }
 
     public String getReporte() {
@@ -20,7 +20,12 @@ public class Alquileres {
     }
 
     public String getInventario() {
-        return null;
+        StringBuilder inventario = new StringBuilder("INVENTARIO\n");
+        for (Maquina maquina : maquinas) {
+            inventario.append(maquina.obtenerDetalle()).append("\n");
+        }
+        inventario.append("Total de maquinas: ").append(maquinas.size());
+        return inventario.toString();
     }
 
     public void registrarMaquina(Maquina maquina) {
@@ -50,11 +55,45 @@ public class Alquileres {
     }
 
     public void cotizar(int codigo, int dias) {
+        Maquina maquina = validarAlquiler(codigo, dias);
+        if (maquina == null) {
+            return;
+        }
+        System.out.println("Cotización: " + maquina.obtenerDetalle());
+        System.out.println("Total por " + dias + " día(s): Q" + String.format("%.2f", maquina.calcularCosto(dias)));
     }
 
     public void confirmarAlquiler(int codigo, int dias) {
+        Maquina maquina = validarAlquiler(codigo, dias);
+        if (maquina == null) {
+            return;
+        }
+        double costo = maquina.calcularCosto(dias);
+        maquina.alquilar();
+        ingresos = redondear(ingresos + costo);
+        System.out.println("Alquiler confirmado: " + maquina.obtenerDetalle());
+        System.out.println("Total por " + dias + " día(s): Q" + String.format("%.2f", costo));
+        System.out.println("Ingresos acumulados: Q" + String.format("%.2f", ingresos));
     }
 
-    public void registrarDevolucion(int codigo) {
+    private Maquina validarAlquiler(int codigo, int dias) {
+        if (dias <= 0) {
+            System.out.println("Error: los días deben ser un número entero positivo.");
+            return null;
+        }
+        Maquina maquina = buscarMaquina(codigo);
+        if (maquina == null) {
+            System.out.println("Error: no existe una máquina con el código " + codigo + ".");
+            return null;
+        }
+        if (!maquina.isDisponible()) {
+            System.out.println("Error: la máquina " + codigo + " está alquilada.");
+            return null;
+        }
+        return maquina;
+    }
+
+    private static double redondear(double valor) {
+        return Math.round(valor * 100.0) / 100.0;
     }
 }

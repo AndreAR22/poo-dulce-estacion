@@ -15,9 +15,11 @@ public class AlquileresController {
     }
 
     public void cotizar(int codigo, int dias) {
+        alquileres.cotizar(codigo, dias);
     }
 
     public void confirmarAlquiler(int codigo, int dias) {
+        alquileres.confirmarAlquiler(codigo, dias);
     }
 
     public void registrarDevolucion(int codigo) {
