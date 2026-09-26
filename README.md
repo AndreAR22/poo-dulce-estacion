@@ -1,4 +1,16 @@
 # Ejercicio 4 - Temario C: Dulce Estación
+
+## Ejecutar programa
+
+Asegurate de tener Java y Git instalados en tu sistema. Clona el repositorio y compila el proyecto:
+
+```bash
+git clone https://github.com/uvg/poo-dulce-estacion.git
+cd poo-dulce-estacion
+javac -d bin *.java
+java -cp bin Main
+```
+
 ## Análisis
 
 1. **Objetivo**\
