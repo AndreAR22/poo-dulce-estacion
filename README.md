@@ -18,7 +18,7 @@ Los códigos no podrán estar vacíos ni repetidos. Los valores numéricos será
    Se iniciará con dos máquinas por categoría, disponibles y sin ingresos. Las entradas inválidas no cerrarán el programa. Los montos tendrán dos decimales y los datos se guardarán solo durante la ejecución.
 
 4. **Clases y responsabilidades**\
-Existirán tres tipos de máquina: Popcorn, Chocolate y Algodon, basadas en la clase padre Maquina. GestorAlquileres administrará el inventario y los alquileres. 
+Existirán tres tipos de máquina: Popcorn, Chocolate y Algodon, basadas en la clase padre Maquina. La clase Alquileres administrará el inventario y los alquileres. 
 
 5. **Atributos y métodos**\
 adfssdfnadsnfjkaksjdf
