@@ -1,3 +1,5 @@
+package model;
+
 public class Algodon extends Maquina {
 
     private int potencia;

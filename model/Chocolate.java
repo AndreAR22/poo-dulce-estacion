@@ -1,3 +1,5 @@
+package model;
+
 public class Chocolate extends Maquina {
 
     private double capacidad;

@@ -1,3 +1,5 @@
+package model;
+
 public class Popcorn extends Maquina {
 
     private int porcionesHora;
